@@ -2,7 +2,7 @@
 
 /**
  * _islower - checks for lowercase characters
- *
+ * @c: parameterto be printed
  *Return: 1 if the output is c, else always 0
  */
 

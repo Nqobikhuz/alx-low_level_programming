@@ -2,8 +2,8 @@
 
 /*
  * add: adds two indegers
- * @a: first integar
- * @b: second integar
+ * @a: first parameter
+ * @b: second parameter
  * Return: the result of the two integars
  */
 

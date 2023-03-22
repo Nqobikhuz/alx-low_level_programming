@@ -9,8 +9,8 @@ int main(void)
 {
 	int i;
 
-	i = 98;
-	positove_or negative(i);
+	i = 0;
+	positive_or negative(i);
 
 	return (0);
 }

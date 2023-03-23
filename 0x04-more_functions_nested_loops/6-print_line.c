@@ -10,7 +10,6 @@ void print_line(int n)
 {
 	int c;
 
-	c = 45;
 	for (c = 1; c <= n; c++)
 	{
 		_putchar('_');

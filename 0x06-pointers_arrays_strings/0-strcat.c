@@ -2,9 +2,9 @@
 
 /**
  * _strcat - will concatenate two scrings
- * @dest: first string
- * @src: string to be appended to dest
- * Return: characters
+ * @dest: destination string
+ * @src: source string
+ * Return: dest
  */
 
 char *_strcat(char *dest, char *src)

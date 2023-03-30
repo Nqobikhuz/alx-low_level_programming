@@ -13,7 +13,7 @@ char *_strncat(char *dest, char *src, int n)
 	int destlength = 0;
 	int i;
 
-	for (i = 0; dest[i]; i++)
+	for (i = 0; dest[i] != '\0'; i++)
 		destlength++;
 
 	for (i = 0; i < n; i++)

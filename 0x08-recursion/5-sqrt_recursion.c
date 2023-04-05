@@ -8,11 +8,14 @@
  *
  * Return: natural square root
  */
-
+int _square(int n, int i);
 int _sqrt_recursion(int n)
 {
-	int i;
+	return (_square(n, 1));
+}
 
+int _square(int n, int i)
+{
 	if (i * i == n)
 	{
 		return (i);
@@ -26,5 +29,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	}
 
-	return (_sqrt_recursion(n));
-			}
+	return (_square(n, i + 1));
+}

@@ -17,17 +17,10 @@ int _sqrt_recursion(int n)
 int _square(int n, int i)
 {
 	if (i * i == n)
-	{
 		return (i);
-	}
-	else if (i * i < n)
-	{
-		return (i + 1);
-	}
-	else
-	{
-		return (-1);
-	}
 
-	return (_square(n, i + 1));
+	if (i * i < n)
+		return (-1);
+
+	return (_square(n, n + 1));
 }

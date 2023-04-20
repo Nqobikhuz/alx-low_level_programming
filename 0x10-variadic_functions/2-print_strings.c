@@ -24,7 +24,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (n == 0)
 	{
-		printf("(nil)\n");
+		printf("(nil)\n")
 	}
 
 	va_start(ap, n);
@@ -32,12 +32,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		str = va_arg(ap, char*);
 		printf("%s", str);
-	
+
 		if (separator && i < n - 1)
-			printf("%s", separator);
+		printf("%s", separator);
 	}
 
 	va_end(ap);
 	printf("\n");
 }
-			
+

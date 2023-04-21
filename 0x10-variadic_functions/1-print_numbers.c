@@ -30,6 +30,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s", separator);
 		}
+		if (x == '\0')
+		{
+			printf(" ");
+		}
 	}
 
 	va_end(ap);

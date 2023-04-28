@@ -3,8 +3,8 @@
 #include <stddef.h>
 
 /**
- * struct lists_s - single linked list
- * @str: string - (malloc'ed string)
+ * struct list_s - single linked list
+ * @str: string (malloc'ed string)
  * @len: length of string
  * @next: points to the next node
  *

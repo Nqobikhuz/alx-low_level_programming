@@ -4,7 +4,6 @@
 
 /**
  * print_list - prints the elements of single linked list list_t
- * @list_t: single liked list
  * @h: pointer to first node
  *
  * Return: number of nodes

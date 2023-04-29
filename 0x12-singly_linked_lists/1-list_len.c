@@ -4,7 +4,6 @@
 /**
  * list_len - prints the number of elements in list_t list
  *
- * @list_t: the sigle linked linked list
  * @h: pointer to the first node
  * Return: the number of elements in a linked list
  */

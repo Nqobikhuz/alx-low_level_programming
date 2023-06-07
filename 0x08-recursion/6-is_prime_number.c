@@ -5,35 +5,35 @@
  *
  * @n: input integers
  *
- * Return: 1 if the integer is a prime numer
+ * Return: 1 if the integer is a prime number
  * otherwise 0
  */
 
 int is_prime_number(int n)
 {
-        int i = 2;
+	int i = 2;
 
-        if (n <= 1)
-        {
-                return (0);
-        }
+	if (n <= 1)
+	{
+		return (0);
+	}
 
-        if (n % i == 0)
-        {
-                return (0);
-        }
+	if (n % i == 0)
+	{
+		return (0);
+	}
 
-        if (i == n)
-        {
-                return (1);
-        }
+	if (i == n)
+	{
+		return (1);
+	}
 
-        else
-        {
-                return (1);
-        }
+	else
+	{
+		return (1);
+	}
 
-        i++;
+	i++;
 
-        return (is_prime_number(n) + 1);
+	return (is_prime_number(n) + 1);
 }

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_prime_number - identifies if an integer is a prime numer
+ * is_prime_number - identifies if an integer is a prime number
  *
  * @n: input integers
  *
@@ -11,28 +11,29 @@
 
 int is_prime_number(int n)
 {
-	return (is_prime_number_recursive(n, 2));
-}
+        int i = 2;
 
-int is_prime_number_recursive(int n, int i)
-{
+        if (n <= 1)
+        {
+                return (0);
+        }
 
-	if (n <= 1)
-	{
-		return (0);
-	}
+        if (n % i == 0)
+        {
+                return (0);
+        }
 
-	if (i == n)
-	{
-		return (1);
-	}
+        if (i == n)
+        {
+                return (1);
+        }
 
-	if (n % i == 0)
-	{
-		return (0);
-	}
+        else
+        {
+                return (1);
+        }
 
-	i++;
+        i++;
 
-	return (is_prime_number(n));
+        return (is_prime_number(n) + 1);
 }

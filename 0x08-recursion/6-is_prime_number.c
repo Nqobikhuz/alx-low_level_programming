@@ -11,18 +11,28 @@
 
 int is_prime_number(int n)
 {
-	int i;
+	return (is_prime_number_recursive(n, 2));
+}
+
+int is_prime_number_recursive(int n, int i)
+{
 
 	if (n <= 1)
 	{
 		return (0);
 	}
 
-	for (i = 2; i <= n / 2; i++)
+	if (i == n)
 	{
-		if (n % i == 0)
-			return (0);
+		return (1);
 	}
 
-	return (1);
+	if (n % i == 0)
+	{
+		return (0);
+	}
+
+	i++;
+
+	return (is_prime_number(n));
 }

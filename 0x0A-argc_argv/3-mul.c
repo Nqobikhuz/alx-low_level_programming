@@ -3,8 +3,8 @@
 
 /**
  * main -  multiplies two numbers
- * @argc: argument count
- * @argv: argument vector
+ * @argc: argument count on the command line
+ * @argv: array of pointers to the strings
  * Return: Always 0 for success
  */
 

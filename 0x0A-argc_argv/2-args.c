@@ -3,19 +3,15 @@
 
 /**
  * main - Prints all aruments it recives
- * @argc: argument count
- * @argv: argument vector
+ * @argc: argument count in command line
+ * @argv: array of pointers to strings on the command line
  * Return: ALways 0
  */
 
 int main(int argc, char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
-	{
-		printf("%s\n", argv[i]);
-	}
+	while (argc--)
+		printf("%s\n", argv++);
 	return (0);
 }
 

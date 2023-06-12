@@ -15,29 +15,30 @@
 char *_strdup(char *str)
 {
 	char *cpy;
-	int size;
-	int i = 0;
+	int size = 0;
 	int j = 0;
 
 	if (str == NULL)
 		return (NULL);
 
-	while (str[i])
+	while (str[size])
 	{
-		i++;
+		size++;
 	}
 
-	cpy = malloc((sizeof(char) * i) + 1);
+	cpy = malloc((sizeof(char *) * (size + 1)));
 
 	if (cpy == NULL)
+	{
 		return (NULL);
+		}
 
-	while (j < i)
+	while (j <= size)
 	{
 		cpy[j] = str[j];
-		i++;
+		j++;
 	}
-	
-	cpy = '\0';
+
+
 	return (cpy);
 }

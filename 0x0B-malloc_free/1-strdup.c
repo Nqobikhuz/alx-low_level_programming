@@ -26,19 +26,18 @@ char *_strdup(char *str)
 		size++;
 	}
 
-	cpy = malloc((sizeof(char *) * (size + 1)));
+	cpy = malloc((sizeof(char) * (size + 1)));
 
 	if (cpy == NULL)
 	{
 		return (NULL);
-		}
+	}
 
 	while (j <= size)
 	{
 		cpy[j] = str[j];
 		j++;
 	}
-
 
 	return (cpy);
 }

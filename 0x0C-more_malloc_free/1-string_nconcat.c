@@ -8,7 +8,7 @@
  *
  * @s1: first string
  * @s2: second string
- * @n: size to be allocated
+ * @n: size of second string
  *
  * Return: a pointer that allocates a new space
  * in memory that has s1, followed by n byes of s2
@@ -16,7 +16,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, j = 0, k = 0, l = 0;
+	unsigned int s1len = 0, s2len = 0, string = 0, i = 0, j = 0;
 	char *str;
 
 	if (s1 == NULL)
@@ -24,30 +24,35 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = " ";
 
-	while (s1[i] != '\0')
-		i++;
-	while (s2[j] != '\0')
-		j++;
+	while (s1[s1len] != '\0')
+		s1len++;
 
-	if (n >= j)
-		l = i + j;
+	while (s2[s2len] != '\0' && s2len < n)
+		s2len++;
+
+	if (n >= s2len)
+		string = s1len + s2len;
 	else
-		l = i + n;
+		string = s1len + s2len;
 
-	*str = malloc(sizeof(char) * l + 1);
+	str = malloc(sizeof(char) * (string + 1));
+
 	if (str == NULL)
 	return (NULL);
-	while (k <= i)
+
+	while (i < s1len)
 	{
-		str[k] = s1[k];
-		k++;
+		str[i] = s1[i];
+		i++;
 	}
-	while (k >= i)
+
+	while (j < s2len && j < n)
 	{
-		str[k] = s2[j];
+		str[i + j] = s2[j];
 		j++;
 	}
 
-	str[k] = '\0';
+	str[i + j] = '\0';
+
 	return (str);
 }

@@ -11,16 +11,15 @@
 
 void print_all(const char * const format, ...)
 {
-	int i = 0;
+	int i = 0, j;
 	va_list ar;
+	char *x
 
 	va_start(ar, format);
 
 	while (format[i])
 	{
-		switch (format[i])
-		{
-			case "c":
+		switch (format[i] == "c":
 			printf("%c", va_arg(ar, int));
 			break;
 

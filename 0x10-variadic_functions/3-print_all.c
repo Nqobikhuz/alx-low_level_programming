@@ -4,49 +4,56 @@
 
 /**
  * print_all - Function that prints anything
+ *
  * @format: a list of types of arguments
  * Return: Nothing
  */
+
 void print_all(const char * const format, ...)
 {
 	int i = 0;
 	va_list ar;
-	char *x;
+	char *x, *seperator = " ";
 
 	va_start(ar, format);
 
-	while (format[i])
+	while (format[i] && format)
 	{
-		if (format[i] == 'c')
+		switch(format[i])
 		{
-			printf("%c", va_arg(ar, int));
-		}
-		else if (format[i] == 'i')
-		{
-			printf("%i", va_arg(ar, int));
-		}
-		else if (format[i] == 'f')
-		{
-			printf("%f", va_arg(ar, double));
-		}
-		else if (format[i] == 's')
-		{
+
+		case 'c':
+			printf("%s%c", seperator, va_arg(ar, int));
+			break;
+
+		case 'i':
+			printf("%s%i", seperator, va_arg(ar, int));
+			break;
+
+		case 'f':
+			printf("%s%f", seperator, va_arg(ar, double));
+			break;
+
+		case 's':
 			x = va_arg(ar, char *);
+
 			if (x == NULL)
 			{
 				printf("(nil)");
 			}
 			else
 			{
-			printf("%s", x);
+			printf("%s%s", seperator, x);
 			}
+			break;
+
+		default:
+			break;
 		}
-		else if (format[i] == 0)
-		{
-			printf("\n");
-		}
+		seperator = ", ";
 			i++;
 	}
+
 	va_end(ar);
 	printf("\n");
 }
